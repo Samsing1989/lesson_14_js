@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 2</title>
+  </head>
+
+  <body>
+    <h1>Задача 2</h1>
+    <p>
+      Розробити функцію, у яку передають об’єкт (день, місяць, рік). Визначити,
+      який буде рік через N місяців.
+    </p>
+
+    <script>
+      let userDate = {
+        day: 1,
+        month: 1,
+        years: 2010,
+      }
+      function getMountYears(userDate, N) {
+        let shifMonth = Math.floor((userDate.month + N) / 12)
+        let shifYears = shifMonth + userDate.years
+        return shifYears
+      }
+      let userMonth = parseInt(prompt("Введіть кількість місяців"))
+      let mountYears = getMountYears(userDate, userMonth)
+      alert(`буде рік ${mountYears}`)
+    </script>
+  </body>
+</html>
